@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import ChevronRightIcon from "@heroicons/react/24/outline/ChevronRightIcon";
 import Link from "next/link";
-import ButtonFunction from "../componenets/ButtonFunction";
+import ButtonFunction from "../components/ButtonFunction";
 
 type Btn = {
   name: string;
@@ -68,7 +68,7 @@ const PageName = ({
             <div className="flex">
               <h1
                 className={`${
-                  isSubPage ? "text-subtitle py-4" : "text-title"
+                  isSubPage ? "text-secundary py-4" : "text-subtitle"
                 }  font-semibold `}
               >
                 {name}

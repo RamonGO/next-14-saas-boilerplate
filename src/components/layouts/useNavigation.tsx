@@ -2,10 +2,10 @@ import {
   CreditCardIcon,
   DocumentTextIcon,
   HomeIcon,
-  ShoppingBagIcon,
   BuildingLibraryIcon,
   TicketIcon,
   UsersIcon,
+  CalendarIcon,
 } from "@heroicons/react/24/outline";
 
 import { useTranslations } from "next-intl";
@@ -19,6 +19,9 @@ export const useNavigation = () => {
       sectionName: t("general"),
       items: [
         { name: t("dashboard"), href: "/home", icon: HomeIcon, current: true },
+        { name: t("companies"), href: "/home/companies", icon: BuildingLibraryIcon, current: false },
+        { name: t("taxFilings"), href: "/home/taxfilings", icon: DocumentTextIcon, current: false },
+        { name: t("calendar"), href: "/home/calendar", icon: CalendarIcon, current: false },
       ],
     },
     {
@@ -27,28 +30,11 @@ export const useNavigation = () => {
         {
           name: t("exampleOne"),
           href: "/home/examples",
-          icon: ShoppingBagIcon,
+          icon: DocumentTextIcon,
           current: false,
         },
       ],
-    },
-    {
-      sectionName: t("billing"),
-      items: [
-        {
-          name: t("wallet"),
-          href: "/home/wallet?currency=usd",
-          icon: CreditCardIcon,
-          current: true,
-        },
-        {
-          name: t("invoices"),
-          href: "/home/invoices",
-          icon: DocumentTextIcon,
-          current: true,
-        },
-      ],
-    },
+    }
   ];
   const superAdminNavigation = [
     {

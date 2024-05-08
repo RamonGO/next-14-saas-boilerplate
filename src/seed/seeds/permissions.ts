@@ -35,5 +35,9 @@ export const permissions = [
     {
       name: "superAdmin:billing:write",
       description: "Write Invoices, Plans, Subscriptions",
+    },
+    {
+      name: "admin:tax:upsert",
+      description: "Write Tax Module",
     }
   ];

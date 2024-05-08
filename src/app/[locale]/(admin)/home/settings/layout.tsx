@@ -4,7 +4,7 @@ import PageName from "@/components/ui/commons/PageName";
 import { Metadata } from "next";
 import { useTranslations } from "next-intl";
 export const metadata: Metadata = {
-  title: "Ajustes",
+  title: "Settings",
 };
 
 const SettingRoot = ({ children }: { children: ReactNode }) => {
@@ -13,18 +13,7 @@ const SettingRoot = ({ children }: { children: ReactNode }) => {
     <div>
       <PageName
         name={t("settings")}
-        breadcrumbs={[
-          {
-            name: t("dashboard"),
-            href: "/home",
-          },
-          {
-            name: t("settings"),
-            href: "/home/settings/profile",
-          },
-        ]}
       />
-      <SettingsTabs />
       <div>{children}</div>
     </div>
   );

@@ -24,7 +24,7 @@ export async function createDefaultSettingForuser(user: User) {
   });
 }
 
-export const getUser = async (userAuthData: any) => {
+export const getUser = async (userAuthData: any, type:string="user") => {
   const include = {
     permissions: true,
     Membership: {
@@ -45,10 +45,17 @@ export const getUser = async (userAuthData: any) => {
       },
     },
   };
+  let externalIdToFind
+  if (type=="user"){
+    externalIdToFind=userAuthData.userId
+  }
+  else{
+    externalIdToFind=userAuthData.orgId
+  };
 
   let user = await prisma.user.findFirst({
     where: {
-      externalId: userAuthData.orgId || userAuthData.userId,
+      externalId: externalIdToFind,
     },
     include,
   });
@@ -56,7 +63,7 @@ export const getUser = async (userAuthData: any) => {
   if (!user) {
     user = await prisma.user.findFirst({
       where: {
-        externalId: userAuthData.orgId || userAuthData.userId,
+        externalId: externalIdToFind,
       },
       include,
     });
@@ -69,7 +76,7 @@ export const getUser = async (userAuthData: any) => {
       await new Promise((resolve) => setTimeout(resolve, retryDelay));
       user = await prisma.user.findFirst({
         where: {
-          externalId: userAuthData.orgId || userAuthData.userId,
+          externalId: externalIdToFind,
         },
         include,
       });

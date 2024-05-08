@@ -5,6 +5,8 @@ import { permissions } from "./seeds/permissions";
 import { modules } from "./seeds/modules";
 import { PrismaClient } from "@prisma/client";
 import { paymentsMethods, pricings } from "./seeds/pricing";
+import { users } from "./seeds/users";
+import { companies } from "./seeds/companies";
 
 const prisma = new PrismaClient();
 
@@ -39,6 +41,14 @@ async function main() {
 
     await tx.paymentMethod.createMany({
       data: paymentsMethods,
+    });
+
+    await tx.company.createMany({
+      data: companies,
+    });
+
+    await tx.user.createMany({
+      data: users,
     });
   });
 }

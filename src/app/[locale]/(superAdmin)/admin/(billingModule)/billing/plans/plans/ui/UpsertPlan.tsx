@@ -10,9 +10,9 @@ const UpsertPlan = ({ planId, values }: { planId?: number; values?: any }) => {
   const fields: Field[] = [
     {
       name: "name",
-      label: "Name",
+      label: "Nombre",
       type: "text",
-      hasLanguageSupport: true,
+      hasLanguageSupport: false,
       required: true,
     },
     {

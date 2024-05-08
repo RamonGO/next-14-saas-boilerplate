@@ -12,7 +12,7 @@
     "seed": "ts-node  src/seed/seed.ts"
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.29.6",
+    "@clerk/nextjs": "^4.29.12",
     "@clerk/themes": "^1.7.9",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.1.1",
@@ -35,7 +35,7 @@
     "slick-carousel": "^1.8.1",
     "sonner": "^1.2.4",
     "stripe": "^14.10.0",
-    "svix": "^1.15.0",
+    "svix": "^1.21.0",
     "use-debounce": "^10.0.0",
     "zustand": "^4.4.7"
   },

@@ -32,7 +32,7 @@ const DeleteModel = ({
   return (
     <div>
       <button className="btn-icon" onClick={handleDeleteModel}>
-        <TrashIcon className="w-6 h-6" />
+        <TrashIcon className="w-3 h-3" />
       </button>
     </div>
   );

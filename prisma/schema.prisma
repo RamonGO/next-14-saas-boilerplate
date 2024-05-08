@@ -527,6 +527,13 @@ enum InvoiceStatus {
   EXPIRED
 }
 
+enum TaxFilingStatus {
+  DRAFT
+  AWAITING_APPROVAL
+  APPROVED
+  SUBMITED
+}
+
 enum ScopeType {
   USER
   CLIENT
@@ -556,4 +563,47 @@ enum ServiceType {
   DESIGN
   MARKETING
   CONSULTING
+}
+
+//*************************** RGO ***************************//
+model Company {
+  id        Int         @id @default(autoincrement())
+  name      String
+  taxId     String
+  country   String
+  orgId     Int
+  taxForms  TaxForm[]
+  taxFilings TaxFiling[]
+  active    Boolean     @default(true)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  
+}
+
+model TaxFiling {
+  id            Int             @id @default(autoincrement())
+  company       Company         @relation(fields: [companyId], references: [id])
+  taxForm       TaxForm         @relation(fields: [taxFormId], references: [id])
+  dueDate       DateTime
+  status        TaxFilingStatus
+  orgId         Int
+  extraordinary Boolean
+  active        Boolean         @default(true)
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  companyId     Int
+  taxFormId     Int
+}
+
+model TaxForm {
+  id          Int         @id @default(autoincrement())
+  name        String
+  description String
+  country     String
+  informative Boolean
+  active      Boolean     @default(true)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  company     Company[]
+  taxFiling   TaxFiling[]
 }

@@ -14,12 +14,27 @@
       "exampleTitle": "Example Page Title",
       "btnExample": "Button Example",
       "exampleOne": "Example One",
+      "companies": "Companies",
+      "companiesTitle": "Companies",
+      "btnCompanies": "New Company",
+      "calendar": "Calendar",
+      "calendarTitle": "Calendar",
+      "btnCalendar": "Button Calendar",
+      "taxforms": "Tax Forms",
+      "taxformsTitle": "Tax Forms",
+      "btnTaxforms": "New Tax Form",
+      "taxFilings": "Tax Filings",
+      "taxFilingsTitle": "Tax Filings",
+      "btntaxFilings": "Button Tax Filings",
       "billing": "Billing",
       "invoices": "Invoices",
       "wallet": "Wallet",
       "affiliatePanel": "Affiliate Panel",
       "settings": "Settings",
-      "support": "Support"
+      "support": "Support",
+      "searchCompanyByName": "Search companies by name",
+      "searchTaxFormsByName": "Search Tax Forms",
+      "searchSettingsByName": "Search settings"
     },
     "pages": {
       "dashboard": {
@@ -27,6 +42,7 @@
         "subtitle": "Welcome to your dashboard",
         "actionOne": "Make your first order",
         "actionOneDescription": "Go to the billing section and make your first order",
+        "actionDescription": "Go to the billing section and make your first order",
         "actionTwo": "Manage your wallet",
         "actionTwoDescription": "Check your wallet balance",
         "exampleActive": "Examples Actives",
@@ -38,6 +54,12 @@
         "seeMovements": "See Movements",
         "movementIn": "Movements in",
         "notMovemenetsFound": "No movements found in this currency"
+      },
+      "companies": {
+        "notCompaniesFound": "No companies found"
+      },
+      "taxforms": {
+        "notTaxFormsFound": "No tax forms found"
       },
       "invoices": {
         "invoices": "Invoices",

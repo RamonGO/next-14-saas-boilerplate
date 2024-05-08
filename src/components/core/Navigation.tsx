@@ -25,7 +25,7 @@ const Navigation = ({
   const {toggleSidebarMenu} = useSidebarState(({toggleSidebarMenu}) => ({toggleSidebarMenu}));
   
   const pathName =  usePathname();
- 
+  const pathNameWOLocale=pathName.substring(pathName.indexOf('/', 1));
   const [links, setLinks] = useState<NavigationSection[]>([]);
 
   useEffect(() => {
@@ -59,16 +59,16 @@ const Navigation = ({
                     href={item.href}
                     onClick={() => toggleSidebarMenu()}
                     className={classNames(
-                      item.href === pathName
+                      item.href === pathNameWOLocale
                         ? "bg-main-selected text-primary-selected"
-                        : " bg-main-hover",
+                        : " bg-main-hover text-primary-hover",
                       "group flex gap-x-3 rounded-md p-2  text-primary"
                     )}
                   >
                     <item.icon
                       className={classNames(
-                        item.href === pathName
-                          ? "text-primary-selected"
+                        item.href === pathNameWOLocale
+                          ? "text-primary"
                           : "text-primary",
                         "h-6 w-6 shrink-0 text-primary-hover"
                       )}

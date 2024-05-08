@@ -14,12 +14,28 @@
       "exampleTitle": "Título de la página de ejemplo",
       "btnExample": "Ejemplo de botón",
       "exampleOne": "Ejemplo uno",
+      "companies": "Empresas",
+      "companiesTitle": "Empresas",
+      "btnCompanies": "Nueva Empresa",
+      "companyOne": "Empresa Uno",
+      "calendar": "Calendario",
+      "calendarTitle": "Calendario",
+      "btnCalendar": "Boton Calendario",
+      "taxforms": "Modelos de Impuestos",
+      "taxformsTitle": "Modelos de Impuestos",
+      "btnTaxforms": "Nuevo Modelo",
+      "taxFilings": "Presentaciones Impuestos",
+      "taxFilingsTitle": "Presentaciones Impuestos",
+      "btntaxFilings": "Boton Presentaciones Impuestos",
       "billing": "Facturación",
       "invoices": "Facturas",
       "wallet": "Billetera",
       "affiliatePanel": "Panel de afiliados",
       "settings": "Configuración",
-      "support": "Soporte"
+      "support": "Soporte",
+      "searchCompanyByName": "Buscar empresa por nombre",
+      "searchTaxFormsByName": "Buscar modelos de impuestos",
+      "searchSettingsByName": "Buscar ajustes"
     },
     "pages": {
       "dashboard": {
@@ -27,6 +43,7 @@
         "subtitle": "Bienvenido a tu tablero",
         "actionOne": "Haz tu primer pedido",
         "actionOneDescription": "Ve a la sección de facturación y haz tu primer pedido",
+        "actionDescription": "Ve a la sección de facturación y haz tu primer pedido",
         "actionTwo": "Administra tu billetera",
         "actionTwoDescription": "Verifica el saldo de tu billetera",
         "exampleActive": "Ejemplos activos",
@@ -38,6 +55,12 @@
         "seeMovements": "Ver movimientos",
         "movementIn": "Movimientos en",
         "notMovemenetsFound": "No se encontraron movimientos en esta moneda"
+      },
+      "companies": {
+        "notCompaniesFound": "No se encontraron empresas"
+      },
+      "taxforms": {
+        "notTaxFormsFound": "No se encontraron modelos de impuestos"
       },
       "invoices": {
         "invoices": "Facturas",

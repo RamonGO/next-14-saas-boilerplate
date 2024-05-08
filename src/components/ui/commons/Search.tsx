@@ -8,7 +8,7 @@ const Search = ({ placeholder }: { placeholder?: string }) => {
   const searchParams = useSearchParams();
   const pathName = usePathname();
   const { replace } = useRouter();
-
+  
   const handleSearch = useDebouncedCallback((term: string) => {
     const params = new URLSearchParams(searchParams);
     if (term) {
@@ -23,7 +23,7 @@ const Search = ({ placeholder }: { placeholder?: string }) => {
   return (
     <div className="mb-3">
       <div>
-        <div className="relative  flex items-center">
+        <div className="relative max-w-xs">
           <label htmlFor="search" className="sr-only">
             Search
           </label>
